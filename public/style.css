@@ -33,7 +33,7 @@ body {
     margin-top: 7px;
 }
 
-.btn{
+.navi-btn {
     /* background-color: red; */
     border: 3px solid aquamarine;
     padding: 5px 10px;
@@ -42,7 +42,7 @@ body {
     font-size: 1.5rem;
 }
 
-.btn:hover{
+.navi-btn:hover {
     color: white;
     font-family: 'Dongle', sans-serif;
     font-size: 1.5rem;
@@ -59,6 +59,13 @@ footer {
     font-size: 1.5rem;
     line-height: 0.6;
 }
+
+.fab:hover{
+    color : aquamarine;
+    transition: 0.3s;
+    box-shadow: 0px 26px 32px rgb(0, 0, 0, 0.2);
+}
+
 
 
 
@@ -128,7 +135,7 @@ hr {
 
 
 
-/* This is for the blog Page */
+/* This is for the Main Page */
 .blog {
     display: flex;
     justify-content: center;
@@ -259,11 +266,11 @@ form textarea {
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
-.read button:hover{
+.read button:hover {
     cursor: pointer;
-    background-color: transparent;
-    border : 3px solid white;
-    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+    background-color: rgb(107, 255, 207);
+    border: 3px solid rgb(107, 255, 207);
+    box-shadow: 0px 26px 32px rgb(0, 0, 0, 0.2);
 }
 
 .read a {
@@ -272,9 +279,6 @@ form textarea {
 }
 
 
-/* This is the Blog Read Page */
-
-.blog-read img {}
 
 
 /* This is for the Home Page */
@@ -328,11 +332,11 @@ form textarea {
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
-.home1 button:hover{
+.home1 button:hover {
     cursor: pointer;
-    background-color: transparent;
-    border : 3px solid white;
-    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+    background-color: rgb(107, 255, 207);
+    border: 3px solid rgb(107, 255, 207);
+    box-shadow: 0px 26px 32px rgb(0, 0, 0, 0.2);
 }
 
 .home2 {
@@ -348,7 +352,7 @@ form textarea {
 
 .home2 h1 {
     font-family: 'Silkscreen', cursive;
-    background: -webkit-linear-gradient( white,red, yellow, green, blue);
+    background: -webkit-linear-gradient(white, red, yellow, green, blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -386,7 +390,7 @@ form textarea {
     color: aquamarine;
 }
 
-.card-hover:hover{
+.card-hover:hover {
     box-shadow: 0px 18px 24px rgb(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -433,7 +437,7 @@ form textarea {
     margin: 15px 0px;
 }
 
-.loca-register form label {
+.local-register form label {
     display: block;
     color: #2F4960;
     font-size: 14px;
@@ -562,18 +566,29 @@ form textarea {
     margin-bottom: 100px;
 }
 
-.blog-each {
+.blog-each1 {
     background-color: white;
     /* max-width: 70vw; */
-    padding: 20px;
+    /* padding: 20px; */
     margin-top: 100px;
     border-radius: 20px;
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2)
 }
 
+.blog-each {
+    padding: 20px;
+}
+
+.blog-each1 img {
+    width: 100%;
+    max-height: 30vh;
+    border-radius: 20px 20px 0px 0px;
+}
+
+
 
 .blog-topic {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     text-align: center;
     font-family: 'Silkscreen', cursive;
     margin-bottom: 20px;
@@ -598,7 +613,8 @@ h6 {
 }
 
 .blog-data p {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    color: #2F4960;
     line-height: 0.8;
     text-align: start;
 }
@@ -607,6 +623,174 @@ h6 {
     font-size: 3rem;
     line-height: 0.5;
     margin-top: 30px;
+}
+
+.blog-header h1 {
+    font-family: 'Silkscreen', cursive;
+}
+
+.blog-header p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    line-height: 0.8;
+}
+
+.blog-header a{
+    text-decoration: none;
+}
+
+.blog-header button {
+    padding: 10px;
+    font-family: 'Dongle', sans-serif;
+    background-color: aquamarine;
+    color: aquamarine;
+    font-size: 1.8rem;
+    padding: 0 30px;
+    border-radius: 10px;
+    border: 3px solid aquamarine;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.blog-header button:hover {
+    cursor: pointer;
+    background-color: rgb(107, 255, 207);
+    border: 3px solid rgb(107, 255, 207);
+    box-shadow: 0px 26px 32px rgb(0, 0, 0, 0.2);
+
+}
+
+.blog-header a {
+    text-decoration: none;
+    color: white;
+}
+.blog-header a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* This is for the Contact Page */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+
+.contact-info{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    /* background-color: yellow; */
+    max-width: 30vw;
+    width: 100%;
+    
+}
+
+.contact-email {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.8rem;
+    line-height: 0.5;
+    color: #2F4960;
+}
+
+.contact-email h4{
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: 450;
+}
+
+.contact-email a{
+    text-decoration: none;
+}
+
+.local-contact {
+    display: block;
+    width: 100%;
+    max-width: 30vw;
+    padding: 50px 30px;
+    background-color: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.local-contact h1{
+    font-family: 'Silkscreen', cursive; 
+}
+
+.local-contact p{
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.8rem;
+    line-height: 0.8;
+}
+
+
+.local-contact button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #2F4960;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+.loca-contact form label {
+    display: block;
+    color: #2F4960;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.local-contact form input {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.local-contact form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.local-contact form textarea {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.local-contact form textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 
@@ -625,7 +809,7 @@ h6 {
     }
 
     /* Main */
-    .read{
+    .read {
         max-width: 70vw;
     }
 
@@ -638,31 +822,40 @@ h6 {
     }
 
     /* About Page */
-    .about1{
+    .about1 {
         max-width: 70vw;
     }
+
     .about2 {
         max-width: 80vw;
     }
 
-    .about3{
+    .about3 {
         max-width: 80vw;
     }
 
     /* Home Page */
-    .home1{
+    .home1 {
         max-width: 80vw;
     }
 
-    .home2{
+    .home2 {
         max-width: 80vw;
     }
 
-    .home3{
+    .home3 {
         max-width: 80vw;
     }
 
-    .home4{
+    .home4 {
+        max-width: 80vw;
+    }
+
+    .local-contact{
+        max-width: 80vw;
+    }
+
+    .contact-info{
         max-width: 80vw;
     }
 }

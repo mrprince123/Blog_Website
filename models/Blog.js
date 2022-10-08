@@ -23,9 +23,17 @@ const BlogSchema = new mongoose.Schema({
     },
     Content3Heading :  {
         type : String,
-        required : false
+        required : true
     },
     BlogContent3 : {
+        type : String,
+        required : true
+    },
+    Content4Heading :  {
+        type : String,
+        required : false
+    },
+    BlogContent4 : {
         type : String,
         required : false
     },

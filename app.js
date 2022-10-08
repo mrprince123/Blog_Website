@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const BlogModel = require('./models/Blog');
+const ContactModel = require("./models/Contact");
 const ejs = require('ejs');
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
@@ -111,6 +112,8 @@ app.post("/insert", async function (req, res) {
     const BlogContent2 = req.body.BlogContent2
     const Content3Heading = req.body.Content3Heading
     const BlogContent3 = req.body.BlogContent3
+    const Content4Heading = req.body.Content4Heading
+    const BlogContent4 = req.body.BlogContent4
     const BlogPostDate = req.body.BlogPostDate
     const AuthorName = req.body.AuthorName
     const AuthorEmail = req.body.AuthorEmail
@@ -123,6 +126,8 @@ app.post("/insert", async function (req, res) {
         BlogContent2: BlogContent2,
         Content3Heading: Content3Heading,
         BlogContent3: BlogContent3,
+        Content4Heading: Content4Heading,
+        BlogContent4: BlogContent4,
         BlogPostDate: BlogPostDate,
         AuthorName: AuthorName,
         AuthorEmail: AuthorEmail
@@ -135,6 +140,7 @@ app.post("/insert", async function (req, res) {
     } catch (error) {
         res.send("This is the Error : " + error);
     }
+
 });
 
 app.get("/blog", function (req, res) {
@@ -147,6 +153,29 @@ app.get("/blog", function (req, res) {
         }
     });
 });
+
+app.get("/contact", function(req, res){
+    res.render('contact');
+})
+
+app.post("/contact", async function (req, res) {
+    const Name = req.body.Name
+    const Email = req.body.Email
+    const Message = req.body.Message
+
+    const c1 = new ContactModel({
+        Name: Name,
+        Email: Email,
+        Message: Message
+    });
+
+    try {
+        await c1.save();
+        res.send("Thanks For Contacting Us.");
+    } catch (error) {
+        res.send("This is the Error : " + error);
+    }
+})
 
 
 app.get("/logout", function (req, res) {
@@ -187,6 +216,8 @@ app.post("/login", function (req, res) {
     });
 
 });
+
+
 
 
 

@@ -7,52 +7,63 @@
             <h1>Blog Page</h1>
             <hr>
             <p>How to Scale Your Dev Team : An Interview With Blue Apron's CTO</p>
+            <button><a href="/main">Create Blog</a></button>
         </div>
 
         <div class="blogs">
 
             <% blogsData.forEach(function(blog){ %>
 
-                <div class="blog-each">
-                    <h2 class="blog-topic">
-                        <%=blog.BlogTopic%>
-                    </h2>
+                <div class="blog-each1">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                        alt="">
+                    <div class="blog-each">
+                        <h2 class="blog-topic">
+                            <%=blog.BlogTopic%>
+                        </h2>
 
-                    <div class="blog-info">
-                        <h5> Written by
-                            <%=blog.AuthorName %>
-                        </h5>
-                        <h6> Email
-                            <%=blog.AuthorEmail %>
-                        </h6>
+                        <div class="blog-info">
+                            <h5> Written by
+                                <%=blog.AuthorName %>
+                            </h5>
+                            <h6> Email
+                                <%=blog.AuthorEmail %>
+                            </h6>
 
-                        <h6> Date
-                            <%=blog.BlogPostDate%>
-                        </h6>
+                            <h6> Date
+                                <%=blog.BlogPostDate%>
+                            </h6>
+                        </div>
+
+                        <div class="blog-data">
+                            <h2>
+                                <%=blog.Content1Heading%>
+                            </h2>
+                            <p>
+                                <%=blog.BlogContent %>
+                            </p>
+                            <h2>
+                                <%=blog.Content2Heading%>
+                            </h2>
+                            <p>
+                                <%=blog.BlogContent2 %>
+                            </p>
+                            <h2>
+                                <%=blog.Content3Heading%>
+                            </h2>
+                            <p>
+                                <%=blog.BlogContent3 %>
+                            </p>
+                            <h2>
+                                <%=blog.Content4Heading%>
+                            </h2>
+                            <p>
+                                <%=blog.BlogContent4 %>
+                            </p>
+                        </div>
+                        <h6>Thanks for Reading</h6>
+                        <h4>See Others Posts on our Blog</h4>
                     </div>
-
-                    <div class="blog-data">
-                        <h2>
-                            <%=blog.Content1Heading%>
-                        </h2>
-                        <p>
-                            <%=blog.BlogContent %>
-                        </p>
-                        <h2>
-                            <%=blog.Content2Heading%>
-                        </h2>
-                        <p>
-                            <%=blog.BlogContent2 %>
-                        </p>
-                        <h2>
-                            <%=blog.Content3Heading%>
-                        </h2>
-                        <p>
-                            <%=blog.BlogContent3 %>
-                        </p>
-                    </div>
-                    <h6>Thanks for Reading</h6>
-                    <h4>See Others Posts on our Blog</h4>
                 </div>
                 <% }) %>
         </div>
