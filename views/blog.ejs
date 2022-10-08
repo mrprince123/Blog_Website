@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+
+    <div class="blog-content">
+
+
+        <div class="blog-header">
+            <h1>Blog Page</h1>
+            <hr>
+            <p>How to Scale Your Dev Team : An Interview With Blue Apron's CTO</p>
+        </div>
+
+        <div class="blogs">
+
+            <% blogsData.forEach(function(blog){ %>
+
+                <div class="blog-each">
+                    <h2 class="blog-topic">
+                        <%=blog.BlogTopic%>
+                    </h2>
+
+                    <div class="blog-info">
+                        <h5> Written by
+                            <%=blog.AuthorName %>
+                        </h5>
+                        <h6> Email
+                            <%=blog.AuthorEmail %>
+                        </h6>
+
+                        <h6> Date
+                            <%=blog.BlogPostDate%>
+                        </h6>
+                    </div>
+
+                    <div class="blog-data">
+                        <h2>
+                            <%=blog.Content1Heading%>
+                        </h2>
+                        <p>
+                            <%=blog.BlogContent %>
+                        </p>
+                        <h2>
+                            <%=blog.Content2Heading%>
+                        </h2>
+                        <p>
+                            <%=blog.BlogContent2 %>
+                        </p>
+                        <h2>
+                            <%=blog.Content3Heading%>
+                        </h2>
+                        <p>
+                            <%=blog.BlogContent3 %>
+                        </p>
+                    </div>
+                    <h6>Thanks for Reading</h6>
+                    <h4>See Others Posts on our Blog</h4>
+                </div>
+                <% }) %>
+        </div>
+
+
+    </div>
+
+
+    <%- include('partials/footer') %>

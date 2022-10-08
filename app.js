@@ -1,0 +1,196 @@
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const BlogModel = require('./models/Blog');
+const ejs = require('ejs');
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const findOrCreate = require('mongoose-findorcreate');
+const session = require('express-session');
+const app = express();
+
+app.use(express.static('public'));
+app.use(express.json());
+app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+// This is for the Database.
+mongoose.connect('mongodb://localhost/BlogData');
+const connection = mongoose.connection
+connection.on('open', function () {
+    console.log("Database is connected");
+});
+
+const UserSchema = new mongoose.Schema({
+    email: String,
+    password: String
+});
+
+UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(findOrCreate);
+
+const User = new mongoose.model("User", UserSchema);
+
+passport.use(User.createStrategy());
+
+passport.serializeUser(function (user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function (id, done) {
+    User.findById(id, function (err, user) {
+        done(err, user);
+    });
+});
+
+passport.use(new GoogleStrategy({
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: "http://localhost:3000/auth/google/main",
+    userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
+},
+    function (accessToken, refreshToken, profile, cb) {
+        User.findOrCreate({ googleId: profile.id }, function (err, user) {
+            return cb(err, user);
+        });
+    }
+));
+
+//  Now I use use the router from here. 
+app.get('/', function (req, res) {
+    res.render('home');
+});
+
+app.get('/auth/google',
+    passport.authenticate('google', { scope: ['profile'] }));
+
+app.get('/auth/google/main',
+    passport.authenticate('google', { failureRedirect: '/login' }),
+    function (req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/main');
+    });
+
+app.get('/register', function (req, res) {
+    res.render('register');
+});
+
+app.get('/login', function (req, res) {
+    res.render('login');
+});
+
+app.get('/main', function (req, res) {
+    if (req.isAuthenticated()) {
+        res.render("main");
+    } else {
+        res.redirect("/login");
+    }
+});
+
+app.get("/about", function (req, res) {
+    res.render("about");
+})
+
+// Blog Code
+app.post("/insert", async function (req, res) {
+    const BlogTopic = req.body.BlogTopic
+    const Content1Heading = req.body.Content1Heading
+    const BlogContent = req.body.BlogContent
+    const Content2Heading = req.body.Content2Heading
+    const BlogContent2 = req.body.BlogContent2
+    const Content3Heading = req.body.Content3Heading
+    const BlogContent3 = req.body.BlogContent3
+    const BlogPostDate = req.body.BlogPostDate
+    const AuthorName = req.body.AuthorName
+    const AuthorEmail = req.body.AuthorEmail
+
+    const b1 = new BlogModel({
+        BlogTopic: BlogTopic,
+        Content1Heading: Content1Heading,
+        BlogContent: BlogContent,
+        Content2Heading: Content2Heading,
+        BlogContent2: BlogContent2,
+        Content3Heading: Content3Heading,
+        BlogContent3: BlogContent3,
+        BlogPostDate: BlogPostDate,
+        AuthorName: AuthorName,
+        AuthorEmail: AuthorEmail
+    });
+
+    try {
+        await b1.save();
+        // res.send("Data is inserted");
+        res.redirect("blog");
+    } catch (error) {
+        res.send("This is the Error : " + error);
+    }
+});
+
+app.get("/blog", function (req, res) {
+    BlogModel.find({}, function (err, result) {
+        if (err) {
+            res.send("This is the Error : " + err)
+        } else {
+            // res.send(result);
+            res.render("blog", { blogsData: result });
+        }
+    });
+});
+
+
+app.get("/logout", function (req, res) {
+    req.logout();
+    res.redirect("/");
+});
+
+app.post("/register", function (req, res) {
+
+    User.register({ username: req.body.username }, req.body.password, function (err, user) {
+        if (err) {
+            console.log(err);
+            res.redirect("/register");
+        } else {
+            passport.authenticate("local")(req, res, function () {
+                res.redirect("/main");
+            });
+        }
+    });
+
+});
+
+app.post("/login", function (req, res) {
+
+    const user = new User({
+        username: req.body.username,
+        password: req.body.password
+    });
+
+    req.login(user, function (err) {
+        if (err) {
+            console.log(err);
+        } else {
+            passport.authenticate("local")(req, res, function () {
+                res.redirect("/main");
+            });
+        }
+    });
+
+});
+
+
+
+
+app.listen(3000, function () {
+    console.log("Server is running on the port 3000");
+});

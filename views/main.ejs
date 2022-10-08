@@ -1,0 +1,66 @@
+<%- include('partials/header') %>
+
+    <div class="blog">
+        <h1>Blog Page</h1>
+
+        <img src="https://cdn.pixabay.com/photo/2016/05/03/00/07/analytics-1368293_960_720.png" alt="">
+
+
+        <div class="read">
+            <h3>Want to Read ? See our Blogs</h3>
+            <hr>
+            <h2>Your Work Away from work</h2>
+            <p>Checkout our Blog. I am not saying this is good, but people are saying that you must read these blogs. So
+                what are you waiting for click below to see all the blogs.</p>
+            <button><a href="/blog">See Blogs</a></button>
+        </div>
+
+        <h1>Post Blogs</h1>
+        <div class="post">
+
+            <form action="/insert" method="POST">
+                <label for="BlogTopic">Topic</label>
+                <input type="text" placeholder="Enter the blog Topic" name="BlogTopic">
+
+                <label for="Content1Heading">Heading 1</label>
+                <input type="text" placeholder="Enter the content Heading" name="Content1Heading">
+
+
+                <label for="BlogContent">Content 1</label>
+                <textarea type="text" placeholder="Enter the blog Content" rows="5" name="BlogContent"></textarea>
+
+                <label for="Content2Heading">Heading 2</label>
+                <input type="text" placeholder="Enter the content Heading" name="Content2Heading">
+
+                <label for="BlogContent2">Content 2</label>
+                <textarea type="text" placeholder="Enter the blog Content More in Details" rows="5"
+                    name="BlogContent2"></textarea>
+
+                <label for="Content3Heading">Heading 3</label>
+                <input type="text" placeholder="Enter the content Heading" name="Content3Heading">
+
+                <label for="BlogContent3">Content 3</label>
+                <textarea type="text" placeholder="Enter the blog Content More in Details" rows="5"
+                    name="BlogContent3"></textarea>
+
+                <label for="AuthorName">Name</label>
+                <input type="text" placeholder="Enter your name" name="AuthorName">
+
+                <label for="AuthorEmail">Email</label>
+                <input type="email" placeholder="Enter your email" name="AuthorEmail">
+
+                <label for="BlogPostDate">Date</label>
+                <input type="date" placeholder="Enter the upload date" name="BlogPostDate">
+                <button type="submit">Post Blog</button>
+                <!-- <input type="button" value="Submit" onclick="submitForm()"> -->
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+
+
+    <%- include('partials/footer') %>

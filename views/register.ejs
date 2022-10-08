@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+    <div class="register">
+
+        <!-- src = https://cdn.pixabay.com/photo/2020/12/18/00/43/business-5840872_960_720.png -->
+        
+        
+
+        <div class="local-register">
+            <img src="https://cdn.pixabay.com/photo/2020/12/18/00/43/business-5840872_960_720.png" alt="">
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                <button type="submit" class="btn btn-dark">Register</button>
+            </form>
+
+            <h4>or</h4>
+            <a class="google-button-link" href="/auth/google">
+                <button>Signup with Google</button>
+            </a>
+        </div>
+
+        <!-- <div class="google-register">
+           
+        </div> -->
+
+    </div>
+
+
+    <%- include('partials/footer') %>

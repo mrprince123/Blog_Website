@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+/* font-family: 'Dongle', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+/* font-family: 'Silkscreen', cursive; */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, aqua, blue);
+}
+
+/* This is for the Navbar */
+.navbar-brand {
+    font-family: 'Silkscreen', cursive;
+}
+
+.nav-item {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    align-items: baseline;
+}
+
+
+
+
+/* This is for the Footer */
+
+/* This is for the about Page */
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Dongle', sans-serif;
+
+}
+
+.about1 {
+    text-align: center;
+    font-size: 2rem;
+    width: 50vw;
+    margin-top: 100px;
+}
+
+.about1 img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.about2 {
+    width: 50vw;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about2 h1 {
+    font-family: 'Silkscreen', cursive;
+}
+
+hr {
+    background: linear-gradient(to right, red, yellow, green, blue, purple);
+    height: 3px;
+}
+
+.about3 {
+    width: 50vw;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about3 h1 {
+    font-family: 'Silkscreen', cursive;
+}
+
+.about3 img {
+    width: 150px;
+    border-radius: 150px;
+    margin-top: 20px;
+}
+
+
+
+/* This is for the blog Page */
+.blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+
+.blog h1 {
+    margin-bottom: 30px;
+    font-family: 'Silkscreen', cursive;
+}
+
+.blog img {
+    width: 300px;
+}
+
+.post {
+    display: block;
+    width: 100%;
+    max-width: 60vw;
+    padding: 50px 30px;
+    background-color: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.post button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #2F4960;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+form label {
+    display: block;
+    color: #2F4960;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+form input {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+form textarea {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.read {
+    width: 50vw;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.read h3 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 3rem;
+}
+
+.read h2 {
+    font-family: 'Silkscreen', cursive;
+}
+
+.read p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    line-height: 0.8;
+}
+
+.read button {
+    padding: 10px;
+    font-family: 'Dongle', sans-serif;
+    background-color: aquamarine;
+    color: white;
+    font-size: 2rem;
+    padding: 0 30px;
+    border-radius: 10px;
+    border: 2px solid aquamarine;
+}
+
+.read a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* This is the Blog Read Page */
+
+.blog-read img {}
+
+
+/* This is for the Home Page */
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.home1 {
+    width: 50vw;
+    /* background-color: yellow; */
+}
+
+.home1 img {
+    width: 200px;
+    margin: 10px 0;
+}
+
+.home1 h1 {
+    font-family: 'Silkscreen', cursive;
+    font-size: 3rem;
+}
+
+.home1 p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.home1 button {
+    padding: 10px;
+    font-family: 'Dongle', sans-serif;
+    background-color: aquamarine;
+    color: white;
+    font-size: 2rem;
+    padding: 0 30px;
+    border-radius: 10px;
+    border: 2px solid aquamarine;
+}
+
+.home2 {
+    width: 50vw;
+    margin-top: 100px;
+}
+
+.home2 p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.home2 h1 {
+    font-family: 'Silkscreen', cursive;
+}
+
+.home3 {
+    width: 50vw;
+    margin-top: 100px;
+}
+
+.home3 h2 {
+    font-family: 'Silkscreen', cursive;
+}
+
+.home3 p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+
+.home4 {
+    width: 60vw;
+}
+
+.home4 p {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2rem;
+    line-height: 0.8;
+}
+
+.home4 h5 {
+    color: aquamarine;
+}
+
+
+/* This is the Register Page  */
+
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+
+.local-register {
+    display: block;
+    width: 100%;
+    max-width: 50vw;
+    padding: 50px 30px;
+    background-color: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.local-register img {
+    width: 50%;
+}
+
+.local-register button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #2F4960;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+.loca-register form label {
+    display: block;
+    color: #2F4960;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.local-register form input {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.local-register form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.google-button-link {
+    text-decoration: none;
+}
+
+
+/* This is for the Login Page  */
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 200px;
+    margin-top: 50px;
+}
+
+.local-login {
+    display: block;
+    width: 100%;
+    max-width: 50vw;
+    padding: 50px 30px;
+    background-color: white;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.local-login img {
+    width: 50%;
+}
+
+.local-login button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #2F4960;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+.loca-login form label {
+    display: block;
+    color: #2F4960;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.local-login form input {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.local-login form input {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+/* This is the Blog Content Page */
+.blog-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-header {
+    width: 70vw;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+
+.blogs {
+    width: 70vw;
+    margin-bottom: 100px;
+}
+
+.blog-each {
+    background-color: white;
+    padding: 20px;
+    margin-top: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2)
+}
+
+
+.blog-topic {
+    margin-top: 100px;
+    text-align: center;
+    font-family: 'Silkscreen', cursive;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.blog-info {
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.blog-info h5, h6{
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.8rem;
+    line-height: 0.6;
+}
+
+.blog-data {
+    font-family: 'Dongle', sans-serif;
+}
+
+.blog-data p {
+    font-size: 2rem;
+    line-height: 0.8;
+    text-align: start;
+}
+
+.blog-data h2 {
+    font-size: 3rem;
+    line-height: 0.5;
+    margin-top: 30px;
+}
