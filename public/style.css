@@ -18,18 +18,49 @@ body {
 /* This is for the Navbar */
 .navbar-brand {
     font-family: 'Silkscreen', cursive;
+    background: -webkit-linear-gradient(red, red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background-color: red; */
 }
 
+
 .nav-item {
+    /* background-color: yellow; */
     font-family: 'Dongle', sans-serif;
     font-size: 2rem;
-    align-items: baseline;
+    /* text-align: center; */
+    margin-top: 7px;
+}
+
+.btn{
+    /* background-color: red; */
+    border: 3px solid aquamarine;
+    padding: 5px 10px;
+    color: aquamarine;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.5rem;
+}
+
+.btn:hover{
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.5rem;
+    border: 3px solid white;
+    background-color: aquamarine;
 }
 
 
 
 
 /* This is for the Footer */
+footer {
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.5rem;
+    line-height: 0.6;
+}
+
+
 
 /* This is for the about Page */
 .about {
@@ -45,7 +76,7 @@ body {
 .about1 {
     text-align: center;
     font-size: 2rem;
-    width: 50vw;
+    max-width: 50vw;
     margin-top: 100px;
 }
 
@@ -55,7 +86,7 @@ body {
 }
 
 .about2 {
-    width: 50vw;
+    max-width: 50vw;
     text-align: center;
     margin-top: 100px;
 }
@@ -70,9 +101,10 @@ hr {
 }
 
 .about3 {
-    width: 50vw;
+    max-width: 50vw;
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 .about3 h1 {
@@ -83,6 +115,15 @@ hr {
     width: 150px;
     border-radius: 150px;
     margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.about h4 {
+    line-height: 0.6;
+}
+
+.about3 a {
+    font-size: 1.5rem;
 }
 
 
@@ -105,6 +146,7 @@ hr {
 .blog img {
     width: 300px;
 }
+
 
 .post {
     display: block;
@@ -131,6 +173,7 @@ hr {
     cursor: pointer;
     margin: 15px 0px;
 }
+
 
 form label {
     display: block;
@@ -182,7 +225,7 @@ form textarea {
 }
 
 .read {
-    width: 50vw;
+    max-width: 50vw;
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -191,6 +234,7 @@ form textarea {
 .read h3 {
     font-family: 'Dongle', sans-serif;
     font-size: 3rem;
+    line-height: 0.8;
 }
 
 .read h2 {
@@ -211,7 +255,15 @@ form textarea {
     font-size: 2rem;
     padding: 0 30px;
     border-radius: 10px;
-    border: 2px solid aquamarine;
+    border: 3px solid aquamarine;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.read button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border : 3px solid white;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
 .read a {
@@ -238,7 +290,7 @@ form textarea {
 }
 
 .home1 {
-    width: 50vw;
+    max-width: 50vw;
     /* background-color: yellow; */
 }
 
@@ -247,9 +299,15 @@ form textarea {
     margin: 10px 0;
 }
 
+
 .home1 h1 {
     font-family: 'Silkscreen', cursive;
     font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(red, red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home1 p {
@@ -266,11 +324,19 @@ form textarea {
     font-size: 2rem;
     padding: 0 30px;
     border-radius: 10px;
-    border: 2px solid aquamarine;
+    border: 3px solid aquamarine;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.home1 button:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border : 3px solid white;
+    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
 .home2 {
-    width: 50vw;
+    max-width: 50vw;
     margin-top: 100px;
 }
 
@@ -282,15 +348,21 @@ form textarea {
 
 .home2 h1 {
     font-family: 'Silkscreen', cursive;
+    background: -webkit-linear-gradient( white,red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home3 {
-    width: 50vw;
+    max-width: 50vw;
     margin-top: 100px;
 }
 
 .home3 h2 {
     font-family: 'Silkscreen', cursive;
+    background: -webkit-linear-gradient(red, red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .home3 p {
@@ -301,7 +373,7 @@ form textarea {
 
 
 .home4 {
-    width: 60vw;
+    max-width: 60vw;
 }
 
 .home4 p {
@@ -312,6 +384,11 @@ form textarea {
 
 .home4 h5 {
     color: aquamarine;
+}
+
+.card-hover:hover{
+    box-shadow: 0px 18px 24px rgb(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 
@@ -329,7 +406,7 @@ form textarea {
 .local-register {
     display: block;
     width: 100%;
-    max-width: 50vw;
+    max-width: 30vw;
     padding: 50px 30px;
     background-color: white;
     border-radius: 16px;
@@ -404,7 +481,7 @@ form textarea {
 .local-login {
     display: block;
     width: 100%;
-    max-width: 50vw;
+    max-width: 30vw;
     padding: 50px 30px;
     background-color: white;
     border-radius: 16px;
@@ -481,12 +558,13 @@ form textarea {
 
 
 .blogs {
-    width: 70vw;
+    max-width: 70vw;
     margin-bottom: 100px;
 }
 
 .blog-each {
     background-color: white;
+    /* max-width: 70vw; */
     padding: 20px;
     margin-top: 100px;
     border-radius: 20px;
@@ -505,10 +583,11 @@ form textarea {
 .blog-info {
     margin-bottom: 20px;
     text-align: center;
-    
+
 }
 
-.blog-info h5, h6{
+.blog-info h5,
+h6 {
     font-family: 'Dongle', sans-serif;
     font-size: 1.8rem;
     line-height: 0.6;
@@ -528,4 +607,62 @@ form textarea {
     font-size: 3rem;
     line-height: 0.5;
     margin-top: 30px;
+}
+
+
+
+/* Responsive For Mobile  */
+@media (max-width: 980px) {
+
+    /* Login Page */
+    .local-login {
+        max-width: 80vw;
+    }
+
+    /* Register Page */
+    .local-register {
+        max-width: 80vw;
+    }
+
+    /* Main */
+    .read{
+        max-width: 70vw;
+    }
+
+    .post {
+        max-width: 90vw;
+    }
+
+    .blogs {
+        max-width: 90vw;
+    }
+
+    /* About Page */
+    .about1{
+        max-width: 70vw;
+    }
+    .about2 {
+        max-width: 80vw;
+    }
+
+    .about3{
+        max-width: 80vw;
+    }
+
+    /* Home Page */
+    .home1{
+        max-width: 80vw;
+    }
+
+    .home2{
+        max-width: 80vw;
+    }
+
+    .home3{
+        max-width: 80vw;
+    }
+
+    .home4{
+        max-width: 80vw;
+    }
 }
