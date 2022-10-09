@@ -155,7 +155,7 @@ app.get("/blog", function (req, res) {
     });
 });
 
-app.get("/contact", function(req, res){
+app.get("/contact", function (req, res) {
     res.render('contact');
 })
 
@@ -179,7 +179,7 @@ app.post("/contact", async function (req, res) {
     }
 });
 
-app.get('/thanks', function(req, res){
+app.get('/thanks', function (req, res) {
     res.render('thanks');
 });
 
@@ -224,6 +224,11 @@ app.post("/login", function (req, res) {
 });
 
 
-app.listen(3000, function () {
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
+
+app.listen(port, function () {
     console.log("Server is running on the port 3000");
 });
