@@ -171,11 +171,16 @@ app.post("/contact", async function (req, res) {
 
     try {
         await c1.save();
-        res.send("Thanks For Contacting Us.");
+        res.redirect('/thanks');
+        // res.send("Thanks For Contacting Us.");
     } catch (error) {
         res.send("This is the Error : " + error);
     }
-})
+});
+
+app.get('/thanks', function(req, res){
+    res.render('thanks');
+});
 
 
 app.get("/logout", function (req, res) {
@@ -216,10 +221,6 @@ app.post("/login", function (req, res) {
     });
 
 });
-
-
-
-
 
 
 app.listen(3000, function () {
