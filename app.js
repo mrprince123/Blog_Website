@@ -10,6 +10,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 const session = require('express-session');
+const url = process.env.URL;
 const app = express();
 
 app.use(express.static('public'));
@@ -27,7 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // This is for the Database.
-mongoose.connect('mongodb://localhost/BlogData');
+mongoose.connect(url);
 const connection = mongoose.connection
 connection.on('open', function () {
     console.log("Database is connected");
