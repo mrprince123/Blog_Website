@@ -69,6 +69,12 @@ passport.use(new GoogleStrategy({
     }
 ));
 
+// This is global variable for logout. 
+app.use(function(req, res, next){
+    res.locals.isAuthenticated = req.isAuthenticated();
+    next();
+});
+
 //  Now I use use the router from here. 
 app.get('/', function (req, res) {
     res.render('home');
@@ -184,10 +190,7 @@ app.get('/thanks', function (req, res) {
 });
 
 
-app.get("/logout", function (req, res) {
-    req.logout();
-    res.redirect("/");
-});
+
 
 app.post("/register", function (req, res) {
 
@@ -220,8 +223,31 @@ app.post("/login", function (req, res) {
             });
         }
     });
-
 });
+
+
+
+
+
+app.get("/logout", function (req, res, next) {
+    if (req.session) {
+        // delete session object
+        req.session.destroy(function (err) {
+            if (err) {
+                return next(err);
+            } else {
+                res.redirect('/');
+            }
+        })
+    }
+});
+
+
+
+app.get('*/*', function(req, res){
+    res.render('error');
+});
+
 
 
 let port = process.env.PORT;
