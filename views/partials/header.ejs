@@ -40,14 +40,26 @@
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
+
                 <form class="d-flex" role="search">
+                    <%if (isAuthenticated) { %>
+                        <button class="btn btn-outline m-2 navi-btn" type="submit"><a class="nav-link"
+                                href="/logout">Logout</a></button>
 
-
-                    <button class="btn btn-outline m-2 navi-btn" type="submit"><a class="nav-link"
-                            href="/login">Login</a></button>
-                    <button class="btn btn-outline m-2 navi-btn" type="submit"><a class="nav-link"
-                            href="/register">Register</a></button>
+                        <% }else{ %>
+                            <button class="btn btn-outline m-2 navi-btn" type="submit"><a class="nav-link"
+                                    href="/login">Login</a></button>
+                            <button class="btn btn-outline m-2 navi-btn" type="submit"><a class="nav-link"
+                                    href="/register">Register</a></button>
+                            <% } %>
                 </form>
+
+                <!-- <% if(true) { %>
+                    <li><a href="/login">login</a></li>
+                    <% } else { %>
+                        <li><a href="/logout">logout</a></li>
+                        <% } %> -->
+
             </div>
         </div>
     </nav>
