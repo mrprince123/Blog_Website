@@ -12,7 +12,9 @@
 
 body {
     min-height: 100vh;
-    background-image: linear-gradient(to bottom right, aqua, blue);
+    /* background-image: linear-gradient(to bottom right, aqua, blue); */
+    background-color: black;
+    color: white;
 }
 
 /* This is for the Navbar */
@@ -36,7 +38,7 @@ body {
 .navi-btn {
     /* background-color: red; */
     border: 3px solid aquamarine;
-    padding: 5px 10px;
+    padding: 2px 20px;
     color: aquamarine;
     font-family: 'Dongle', sans-serif;
     font-size: 1.5rem;
@@ -46,7 +48,7 @@ body {
     color: white;
     font-family: 'Dongle', sans-serif;
     font-size: 1.5rem;
-    border: 3px solid white;
+    border: 3px solid aquamarine;
     background-color: aquamarine;
 }
 
@@ -92,10 +94,16 @@ footer {
     margin-bottom: 10px;
 }
 
+.about1 h3 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 3rem;
+    line-height: 0.8;
+}
+
 .about2 {
     max-width: 50vw;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 .about2 h1 {
@@ -106,20 +114,21 @@ footer {
     background: linear-gradient(to right, red, yellow, green, aqua, blue);
     height: 4px;
     margin: auto;
-    width: 30%; 
-    margin-top: 10px;
+    width: 40%;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 .about3 {
     max-width: 50vw;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 130px;
     margin-bottom: 50px;
 }
 
 .about3 h1 {
     font-family: 'Silkscreen', cursive;
+    margin-bottom: 20px;
 }
 
 .about3 img {
@@ -129,8 +138,12 @@ footer {
     margin-bottom: 15px;
 }
 
-.about h4 {
-    line-height: 0.6;
+.about p {
+    line-height: 0.8;
+}
+
+.about3 h3 {
+    line-height: 0.5;
 }
 
 .about3 a {
@@ -250,6 +263,9 @@ form textarea {
 
 .read h2 {
     font-family: 'Silkscreen', cursive;
+    background: -webkit-linear-gradient(red, red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .read p {
@@ -304,7 +320,8 @@ form textarea {
 
 .home1 img {
     width: 200px;
-    margin: 10px 0;
+    margin: 20px 0;
+    margin-bottom: 30px;
 }
 
 
@@ -316,6 +333,12 @@ form textarea {
     background: -webkit-linear-gradient(red, red, yellow, green, blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.home1 h2 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 3rem;
+    line-height: 0.5;
 }
 
 .home1 p {
@@ -345,13 +368,19 @@ form textarea {
 
 .home2 {
     max-width: 50vw;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 .home2 p {
     font-family: 'Dongle', sans-serif;
     font-size: 2rem;
     line-height: 1;
+}
+
+.home2 h2 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 3rem;
+    line-height: 0.5;
 }
 
 .home2 h1 {
@@ -361,12 +390,19 @@ form textarea {
     -webkit-text-fill-color: transparent;
 }
 
+
 .home3 {
     max-width: 50vw;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
-.home3 h2 {
+.home3 h3 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 2.5rem;
+    line-height: 0.5;
+}
+
+.home3 h1 {
     font-family: 'Silkscreen', cursive;
     background: -webkit-linear-gradient(red, red, yellow, green, blue);
     -webkit-background-clip: text;
@@ -382,12 +418,14 @@ form textarea {
 
 .home4 {
     max-width: 60vw;
+    margin-bottom: 30px;
 }
 
 .home4 p {
     font-family: 'Dongle', sans-serif;
     font-size: 2rem;
     line-height: 0.8;
+    color:#2F4960;
 }
 
 .home4 h5 {
@@ -439,6 +477,10 @@ form textarea {
     font-weight: 700;
     cursor: pointer;
     margin: 15px 0px;
+}
+
+.local-register h4{
+    color : black;
 }
 
 .local-register form label {
@@ -516,6 +558,10 @@ form textarea {
     margin: 15px 0px;
 }
 
+.local-login h4{
+    color : black;
+}
+
 .loca-login form label {
     display: block;
     color: #2F4960;
@@ -552,6 +598,7 @@ form textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: white;
 }
 
 .blog-header {
@@ -561,6 +608,7 @@ form textarea {
     margin-top: 100px;
     background-color: white;
     border-radius: 20px;
+    color:black;
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
@@ -581,6 +629,7 @@ form textarea {
 
 .blog-each {
     padding: 20px;
+    color : black;
 }
 
 .blog-each1 img {
@@ -700,7 +749,10 @@ h6 {
 
 .contact-info h1 {
     font-family: 'Silkscreen', cursive;
-    line-height: 0.2;
+    line-height: 0.5;
+    background: -webkit-linear-gradient(red, red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-info hr {
@@ -740,6 +792,7 @@ h6 {
 
 .local-contact h1 {
     font-family: 'Silkscreen', cursive;
+    color: black;
 }
 
 .local-contact p {
@@ -835,13 +888,13 @@ h6 {
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
-.local-thanks p{
+.local-thanks p {
     font-family: 'Dongle', sans-serif;
     font-size: 1.8rem;
     line-height: 0.5;
 }
 
-.local-thanks h4{
+.local-thanks h4 {
     font-family: 'Silkscreen', cursive;
 }
 
@@ -865,7 +918,7 @@ h6 {
 }
 
 .local-thanks a {
-    color : white;
+    color: white;
     text-decoration: none;
 }
 
@@ -892,17 +945,18 @@ h6 {
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
-.local-error img{
+.local-error img {
     width: 200px;
 }
 
-.local-error h2, p{
+.local-error h2,
+p {
     font-family: 'Dongle', sans-serif;
     font-size: 2rem;
     line-height: 0.8;
 }
 
-.local-error h1{
+.local-error h1 {
     font-family: 'Silkscreen', cursive;
     font-size: 3rem;
 }
@@ -927,7 +981,7 @@ h6 {
 }
 
 .local-error a {
-    color : white;
+    color: white;
     text-decoration: none;
 }
 
