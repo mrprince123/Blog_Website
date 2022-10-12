@@ -190,8 +190,6 @@ app.get('/thanks', function (req, res) {
 });
 
 
-
-
 app.post("/register", function (req, res) {
 
     User.register({ username: req.body.username }, req.body.password, function (err, user) {
@@ -226,9 +224,6 @@ app.post("/login", function (req, res) {
 });
 
 
-
-
-
 app.get("/logout", function (req, res, next) {
     if (req.session) {
         // delete session object
@@ -241,7 +236,6 @@ app.get("/logout", function (req, res, next) {
         })
     }
 });
-
 
 
 app.get('*/*', function(req, res){
