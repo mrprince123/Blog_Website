@@ -35,6 +35,7 @@ connection.on('open', function () {
 });
 
 const UserSchema = new mongoose.Schema({
+    name: String,
     email: String,
     password: String
 });
@@ -70,7 +71,7 @@ passport.use(new GoogleStrategy({
 ));
 
 // This is global variable for logout. 
-app.use(function(req, res, next){
+app.use(function (req, res, next) {
     res.locals.isAuthenticated = req.isAuthenticated();
     next();
 });
@@ -192,7 +193,7 @@ app.get('/thanks', function (req, res) {
 
 app.post("/register", function (req, res) {
 
-    User.register({ username: req.body.username }, req.body.password, function (err, user) {
+    User.register({ username: req.body.username }, req.body.name, req.body.password, function (err, user) {
         if (err) {
             console.log(err);
             res.redirect("/register");
@@ -238,10 +239,9 @@ app.get("/logout", function (req, res, next) {
 });
 
 
-app.get('*/*', function(req, res){
+app.get('*/*', function (req, res) {
     res.render('error');
 });
-
 
 
 let port = process.env.PORT;
