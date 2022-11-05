@@ -193,7 +193,7 @@ app.get('/thanks', function (req, res) {
 
 app.post("/register", function (req, res) {
 
-    User.register({ username: req.body.username }, req.body.name, req.body.password, function (err, user) {
+    User.register({ username: req.body.username }, req.body.password, function (err, user) {
         if (err) {
             console.log(err);
             res.redirect("/register");
