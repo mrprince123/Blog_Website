@@ -12,7 +12,7 @@
 
 body {
     min-height: 100vh;
-    /* background-image: linear-gradient(to bottom right, aqua, blue); */
+    background-image: linear-gradient(to bottom, aqua, blue);
     background-color: black;
     color: white;
 }
@@ -20,9 +20,11 @@ body {
 /* This is for the Navbar */
 .navbar-brand {
     font-family: 'Silkscreen', cursive;
-    background: -webkit-linear-gradient(red, red, yellow, green, blue);
+    opacity: 100%;
+    background: linear-gradient(to right, red, yellow, green, blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 1.8rem;
     /* background-color: red; */
 }
 
@@ -116,6 +118,7 @@ footer {
     margin: auto;
     width: 40%;
     margin-top: 20px;
+    opacity: 100%;
     margin-bottom: 20px;
 }
 
@@ -302,7 +305,6 @@ form textarea {
 
 
 /* This is for the Home Page */
-
 .home {
     display: flex;
     justify-content: center;
@@ -598,7 +600,7 @@ form textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: white;
+    background-image: linear-gradient(to bottom, aqua, blue);
 }
 
 .blog-header {
@@ -737,7 +739,7 @@ h6 {
     margin-bottom: 50px;
     margin-top: 50px;
     /* background-color: yellow; */
-    max-width: 30vw;
+    max-width: 50vw;
     width: 100%;
 }
 
@@ -749,7 +751,7 @@ h6 {
 
 .contact-info h1 {
     font-family: 'Silkscreen', cursive;
-    line-height: 0.5;
+    line-height: 0.8;
     background: -webkit-linear-gradient(red, red, yellow, green, blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -1050,6 +1052,11 @@ p {
 
     .contact-info {
         max-width: 80vw;
+    }
+
+    .email-body {
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     /* Home Page */

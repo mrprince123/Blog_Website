@@ -2,13 +2,14 @@
 
     <div class="register">
 
-        <!-- src = https://cdn.pixabay.com/photo/2020/12/18/00/43/business-5840872_960_720.png -->
-        
-        
 
         <div class="local-register">
             <img src="https://cdn.pixabay.com/photo/2020/12/18/00/43/business-5840872_960_720.png" alt="">
             <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="email">Name</label>
+                    <input required="true" type="text" class="form-control" name="name">
+                </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input required="true" type="email" class="form-control" name="username">
@@ -25,10 +26,6 @@
                 <button>Signup with Google</button>
             </a>
         </div>
-
-        <!-- <div class="google-register">
-           
-        </div> -->
 
     </div>
 
