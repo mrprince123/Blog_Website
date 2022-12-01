@@ -10,7 +10,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 const session = require('express-session');
-const url = process.env.URL;
+const url = process.env.DBURL;
 const app = express();
 
 app.use(express.static('public'));
