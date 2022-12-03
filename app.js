@@ -28,7 +28,6 @@ app.use(session({
         secure: true,
         maxAge: 60000
     },
-    store: new RedisStore(),
     secret: process.env.SECRET,
     saveUninitialized: true,
     resave: false
@@ -40,7 +39,7 @@ app.use(passport.session());
 // This is for the Database.
 
 mongoose.connect(url, {
-    newUrlParser: true,
+    useNewUrlParser: true
 }).then(() => {
     console.log("Database is successfully connected");
 }).catch((err) => {
