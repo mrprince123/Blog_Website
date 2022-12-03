@@ -38,11 +38,20 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // This is for the Database.
-mongoose.connect(url);
-const connection = mongoose.connection
-connection.on('open', function () {
-    console.log("Database is connected");
-});
+
+mongoose.connect(url, {
+    newUrlParser: true,
+}).then(() => {
+    console.log("Database is successfully connected");
+}).catch((err) => {
+    console.log("This is the erro  : " + err);
+})
+
+// mongoose.connect(url);
+// const connection = mongoose.connection
+// connection.on('open', function () {
+//     console.log("Database is connected");
+// });
 
 const UserSchema = new mongoose.Schema({
     name: String,
