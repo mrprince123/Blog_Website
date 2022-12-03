@@ -10,6 +10,7 @@ const passportLocalMongoose = require('passport-local-mongoose');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 const session = require('express-session');
+const cookieSession = require('cookie-session');
 const url = process.env.DBURL;
 const app = express();
 
@@ -22,12 +23,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('trust proxy', 1);
 // app.set('trust proxy', 1);
 
-app.use(session({
+app.use(cookieSession({
+    name: "session",
+    keys: ["cyberwolve"],
     maxAge: 24 * 60 * 60 * 100,
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: true,
-    resave: false
 }))
 
 app.use(passport.initialize());
@@ -250,8 +249,8 @@ app.get('*/*', function (req, res) {
 });
 
 
-let port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.listen(port, function () {
-    console.log("Server is running on the port 3000");
+    console.log(`Server is running on the port ${port}`);
 });
