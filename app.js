@@ -23,10 +23,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('trust proxy', 1);
 // app.set('trust proxy', 1);
 
-app.use(cookieSession({
-    name: "session",
-    keys: ["cyberwolve"],
-    maxAge: 24 * 60 * 60 * 100,
+app.use(session({
+    cookie: {
+        secure: true,
+        maxAge: 60000
+    },
+    store: new RedisStore(),
+    secret: process.env.SECRET,
+    saveUninitialized: true,
+    resave: false
 }))
 
 app.use(passport.initialize());
