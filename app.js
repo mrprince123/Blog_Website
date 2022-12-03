@@ -18,12 +18,16 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+app.set('trust proxy', 1);
 // app.set('trust proxy', 1);
 
 app.use(session({
+    maxAge: 24 * 60 * 60 * 100,
     secret: process.env.SECRET,
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true,
+    resave: false
 }))
 
 app.use(passport.initialize());
