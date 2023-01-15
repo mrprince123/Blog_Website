@@ -36,8 +36,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// This is for the Database.
 
+// This is for the Database.
 mongoose.connect(url, {
     useNewUrlParser: true
 }).then(() => {
@@ -45,12 +45,6 @@ mongoose.connect(url, {
 }).catch((err) => {
     console.log("This is the erro  : " + err);
 })
-
-// mongoose.connect(url);
-// const connection = mongoose.connection
-// connection.on('open', function () {
-//     console.log("Database is connected");
-// });
 
 const UserSchema = new mongoose.Schema({
     name: String,
@@ -93,6 +87,7 @@ app.use(function (req, res, next) {
     res.locals.isAuthenticated = req.isAuthenticated();
     next();
 });
+
 
 //  Now I use use the router from here. 
 app.get('/', function (req, res) {
