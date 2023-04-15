@@ -34,16 +34,16 @@
             <p>Please fill this form in a decent manner</p>
             <form action="/contact" method="POST">
                 <div class="form-group">
-                    <label for="Name">Name</label>
-                    <input required="true" type="text" class="form-control" name="Name">
+                    <label class="login_label" for="Name">Name</label>
+                    <input  placeholder="Enter your name" required="true" type="text" class="form-control" name="Name">
                 </div>
                 <div class="form-group">
-                    <label for="Email">Email</label>
-                    <input required="true" type="email" class="form-control" name="Email">
+                    <label  class="login_label" for="Email">Email</label>
+                    <input placeholder = "Enter your email " required="true" type="email" class="form-control" name="Email">
                 </div>
                 <div class="form-group">
-                    <label for="Message">Message</label>
-                    <textarea required="true" type="text" class="form-control" rows="5" name="Message"></textarea>
+                    <label  class="login_label" for="Message">Message</label>
+                    <textarea placeholder="Enter your message" required="true" type="text" class="form-control" rows="5" name="Message"></textarea>
                 </div>
                 <button type="submit" class="btn btn-dark">Submit</button>
             </form>

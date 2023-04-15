@@ -12,7 +12,7 @@
 
 body {
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, aqua, blue);
+    background-image: linear-gradient(to bottom, black, black);
     background-color: black;
     color: white;
 }
@@ -427,11 +427,15 @@ form textarea {
     font-family: 'Dongle', sans-serif;
     font-size: 2rem;
     line-height: 0.8;
-    color:#2F4960;
+    color: teal;
 }
 
-.home4 h5 {
-    color: aquamarine;
+.home4 h5, h6 {
+    color: black;
+}
+
+.card-hover {
+    margin-top: 50px;
 }
 
 .card-hover:hover {
@@ -441,7 +445,6 @@ form textarea {
 
 
 /* This is the Register Page  */
-
 .register {
     display: flex;
     justify-content: center;
@@ -456,10 +459,11 @@ form textarea {
     width: 100%;
     max-width: 30vw;
     padding: 50px 30px;
-    background-color: white;
+    background-color: black;
+    border: 2px solid teal;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+    box-shadow: 2px 10px 50px 20px rgba(218, 213, 213, 0.2);
 }
 
 .local-register img {
@@ -471,7 +475,7 @@ form textarea {
     display: block;
     padding: 10px;
     border-radius: 8px;
-    background-color: #2F4960;
+    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 40%, 1) 100%);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     transition: 0.4s;
     color: white;
@@ -481,14 +485,14 @@ form textarea {
     margin: 15px 0px;
 }
 
-.local-register h4{
-    color : black;
+.local-register h4 {
+    color: white;
 }
 
 .local-register form label {
     display: block;
-    color: #2F4960;
-    font-size: 14px;
+    color: white;
+    font-size: 18px;
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: 700;
@@ -506,7 +510,7 @@ form textarea {
     width: 100%;
     padding: 15px;
     border-radius: 8px;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: white;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     transition: 0.4s;
     color: #222;
@@ -535,10 +539,11 @@ form textarea {
     width: 100%;
     max-width: 30vw;
     padding: 50px 30px;
-    background-color: white;
+    background-color: black;
+    border: 2px solid teal;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+    box-shadow: 2px 10px 50px 20px rgba(218, 213, 213, 0.2);
 }
 
 .local-login img {
@@ -550,7 +555,7 @@ form textarea {
     display: block;
     padding: 10px;
     border-radius: 8px;
-    background-color: #2F4960;
+    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 40%, 1) 100%);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     transition: 0.4s;
     color: white;
@@ -560,14 +565,14 @@ form textarea {
     margin: 15px 0px;
 }
 
-.local-login h4{
-    color : black;
+.local-login h4 {
+    color: white;
 }
 
-.loca-login form label {
+.login_label {
     display: block;
-    color: #2F4960;
-    font-size: 14px;
+    color: white;
+    font-size: 18px;
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: 700;
@@ -585,7 +590,7 @@ form textarea {
     width: 100%;
     padding: 15px;
     border-radius: 8px;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: white;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     transition: 0.4s;
     color: #222;
@@ -610,7 +615,7 @@ form textarea {
     margin-top: 100px;
     background-color: white;
     border-radius: 20px;
-    color:black;
+    color: black;
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
@@ -631,7 +636,7 @@ form textarea {
 
 .blog-each {
     padding: 20px;
-    color : black;
+    color: black;
 }
 
 .blog-each1 img {
@@ -747,6 +752,7 @@ h6 {
     font-family: 'Dongle', sans-serif;
     font-size: 2rem;
     line-height: 0.5;
+    color: white;
 }
 
 .contact-info h1 {
@@ -775,6 +781,7 @@ h6 {
     font-size: 2.5rem;
     line-height: 1;
     font-weight: 450;
+    
 }
 
 .contact-email a {
@@ -786,20 +793,26 @@ h6 {
     width: 100%;
     max-width: 30vw;
     padding: 50px 30px;
-    background-color: white;
+    background-color: black;
+    border : 2px solid teal;
     border-radius: 16px;
+    box-shadow: 2px 10px 50px 20px rgba(218, 213, 213, 0.2);
     text-align: center;
-    box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
+    
 }
 
 .local-contact h1 {
     font-family: 'Silkscreen', cursive;
-    color: black;
+    line-height: 0.8;
+    background: -webkit-linear-gradient(red, red, yellow, green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .local-contact p {
     font-family: 'Dongle', sans-serif;
     font-size: 1.8rem;
+    color: white;
     line-height: 0.8;
 }
 
@@ -809,7 +822,7 @@ h6 {
     display: block;
     padding: 10px;
     border-radius: 8px;
-    background-color: #2F4960;
+    background: linear-gradient(90deg, hsla(280, 84%, 41%, 1) 0%, hsla(218, 97%, 40%, 1) 100%);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     transition: 0.4s;
     color: white;
@@ -821,7 +834,7 @@ h6 {
 
 .loca-contact form label {
     display: block;
-    color: #2F4960;
+    color: white;
     font-size: 14px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -840,7 +853,7 @@ h6 {
     width: 100%;
     padding: 15px;
     border-radius: 8px;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: white;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     transition: 0.4s;
     color: #222;
@@ -860,7 +873,7 @@ h6 {
     width: 100%;
     padding: 15px;
     border-radius: 8px;
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: white;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     transition: 0.4s;
     color: #222;
@@ -887,7 +900,7 @@ h6 {
     background-color: white;
     border-radius: 16px;
     text-align: center;
-    color :  black;
+    color: black;
     box-shadow: 0px 6px 12px rgb(0, 0, 0, 0.2);
 }
 
